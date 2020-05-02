@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+body{
+  background-color: #006994;
+}  
+
+#myProgress {
+  width: 100%;
+  background-color:#006994;
+  height: 30px;
+}
+
+#myBar {
+  width: 1%;
+  height: 50px;
+  background-color:yellow;
+}
+
+#hello {
+    
+  height : 50px;
+
+    
+}
+
+.button1 {
+  background-color:#00CCCC;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}  
+  
+</style>
+<body>
+
+<h3> <font size = "6"><font color = "#00CCCC">Number of Visitors: </h3>
+
+
+
+<p>
+<a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter3.stat.ovh/private/freecounterstat.php?c=56sckcr1577b2tehb3lkls5puh762kzq" border="0" title="page counter" alt="page counter"></a>
+
+
+</p>
+
+
+<h1><font color = "#00CCCC">WashingHand Progress Bar</h1>
+
+
+<div id="myProgress">
+  <div id="myBar"></div>
+  <div id="hello"></div>
+</div>
+
+<br>
+<p><button  onclick="move()" class="button1"><font size = "6"><font color="black">Start</button> 
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 250);//it is in miliseconds( 250 )
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        var x = width + "%";  // String written inside quotes
+        document.getElementById("hello").innerHTML = x;
+        document.getElementById("hello").style.fontSize = "xxx-large";
+        
+        
+        
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

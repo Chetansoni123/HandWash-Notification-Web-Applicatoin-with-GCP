@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}View All Users {% endblock %}
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p style="color: yellow"> <font size="5"> {{msg}} {{hello}} </p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+
+
+
+<form  action="#" method="post">
+	<h3> <font color="#00CCCC"><font size="6">Enter username to Quit from the Service </h3>
+	<h4> <font size = "5"><font color="orange">Enter Username:</h4>
+	<p><font color="#006994"><font size="4"> <input type="text" name="del"/></p>
+	<p><font size="5.5"><font color="darkgreen"><input style = "border: #00CCCC; background-color: #00CCCC;" type="submit" value="submit"/></p>
+	
+</form>
+
+{% endblock %}

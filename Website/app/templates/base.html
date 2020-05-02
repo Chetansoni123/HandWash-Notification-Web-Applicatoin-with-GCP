@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>{% block title %}{% endblock %}</title>
+
+  
+ 
+ <style>
+
+body{
+  background-color: #006994;
+
+}
+.button {
+  
+  border: none;
+  color: white;
+  padding: 13px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 4px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+.my-photo{
+        
+        position: relative;
+        right: 85px;
+        bottom:1px;
+      }
+
+
+   </style>
+
+</head>
+	<body>
+		<div class="bg"></div>
+
+  <div style="background-color: #00CCCC" class="btn-group">
+  <a style = "background-color: #00CCCC;float: left;"href="/" class="button" role="button"><font color="purple"> <font size="3"> home </a>
+  <a style = "background-color: #00CCCC;float: left;" href="login" class="button" role="button"> <font color="purple"><font size="3">Login </a>
+  <a style = "background-color: #00CCCC;float: left;"href="logout" class="button" role="button"><font color="purple"> <font size="3">Logout </a>
+  <a style = "background-color: #00CCCC;float: left;"href="delete" class="button" role="button"><font color="purple"><font size="3">Delete User</a>
+  <a style = "background-color: #00CCCC;float: left;"href="userscore" class="button" role="button"><font color="purple"><font size="3">User Score </a>
+  <a style = "background-color: #00CCCC;float : left;"href="send-mail" class="button" role="button"><font color="purple"><font size="3"> Send Mail</a>
+
+  <a style = "background-color: #00CCCC;float: left;"href="handwash" class="button" role="button"><font color="purple"><font size="3"> Start <font color="#00CCCC"></a>  
+  <li></li>
+
+<img class = "my-photo" src="{{url_for('static', filename = 'images/soapwash.jpg')}}" alt="handwash" width="300" height="115" style = "float:right">
+
+</div>
+    
+		<div class="container-fluid">
+		{% block content %}
+		{% endblock %}
+		</div>
+			
+		<script>
+		var button = document.getElementById('clicker');
+        setInterval(function(){
+	    	button.click()
+		},7200000)
+	
+		</script>
+		
+		{% block script %} {% endblock %}
+				
+	</body>
+<html>	

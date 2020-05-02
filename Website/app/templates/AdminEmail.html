@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block title %} Administrator Access {% endblock %}
+
+
+
+{% block content %}
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages : %}
+			{% for msg in messages: %}
+				<h3> <font color="red">{{msg}} </h3>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}			
+
+<form  action="#" method="post">
+	<h2> <font color="#00CCCC">Only Administrator has access! </h2>
+	<h4> <font size="5"><font color="orange"> Admin username:</h4>
+	<p> <font size="4"><font color="#006994"> <input type="text" name="admin"/></p>
+	<p><font color="black"><font size="4"><input style = "border: #00CCCC; background-color: #00CCCC;" type="submit" value="login"/></p>
+	
+</form>
+
+{% endblock %}

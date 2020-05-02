@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}View All Users {% endblock %}
+
+{% block content %}
+
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p><font size="4"> <font color="orange"> {{msg}}!</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+
+<form  action="#" method="post">
+	<h3><font size="5"><font color="#00CCCC"> Enter your Username only after <font color="yellow"> HAND WASH <font color = "#00CCCC">with Soap/Sanitizer and <font color ="yellow">upgrade your score </h3>
+	<h4><font size="5"> <font color="orange">UserName:</h4>
+	<p><font size="4"> <font color="#006994"><input type="text" name="username"/></p>
+	<p><font color="black"><input style = "border: #00CCCC; background-color: #00CCCC;" type="submit" value="Register Your Score"/></p>
+	
+</form>
+
+{% endblock %}

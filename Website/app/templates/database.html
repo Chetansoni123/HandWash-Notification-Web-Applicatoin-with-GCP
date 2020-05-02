@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}View All Users {% endblock %}
+{% block content %}
+	{% for item in values %}
+		<h3> Name: {{item.name}},  Email: {{item.email}}, Score: {{item.score}}</h3>
+    {% endfor %}
+
+{% endblock %}    		

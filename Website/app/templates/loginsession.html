@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} Login Page {% endblock %}
+
+
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p ><font size="4"><font color="yellow"> {{msg}} {{value}} </p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}			
+<form  action="#" method="post">
+	<p> <font size="6"><font color="#00CCCC">Enter UserName:</p>
+	<p> <font size="4"><font color="#006994"><input type="text" name="nm"/></p>
+	
+	<p> <font size="6"><font color="00CCCC">Enter Email ID:</p>
+	<p> <font size="4"><font color="black"><input type="text" name="emai"/></p>	
+	<p><font color="darkgreen"><input style = "border: #00CCCC; background-color: #00CCCC;" type="submit" value="Register"/></p>
+	
+</form>
+
+
+
+
+{% endblock %}
